@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Eater - Infinite World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <h1>Snake Eater</h1>
+      <div class="score-container">
+        <span>Score: </span>
+        <span id="score">0</span>
+      </div>
+      <div id="speed-indicator" class="speed-indicator">
+        <span>Speed: </span>
+        <div class="speed-bar-container">
+          <div id="speed-bar" class="speed-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="game-area">
+      <canvas id="game-canvas" width="400" height="400"></canvas>
+      <div class="leaderboard">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard-entries">
+          <p class="no-scores">No scores yet</p>
+        </div>
+      </div>
+    </div>
+    <div class="game-controls">
+      <p>Use arrow keys to control the snake. The snake gets faster with each food eaten!</p>
+      <div class="buttons">
+        <button id="start-button">Start Game</button>
+        <button id="restart-button" style="display: none;">Restart Game</button>
+      </div>
+      <!-- Touch controls for mobile devices -->
+      <div class="touch-controls">
+        <div class="touch-btn up-btn" id="up-btn">↑</div>
+        <div class="touch-btn left-btn" id="left-btn">←</div>
+        <div class="touch-btn right-btn" id="right-btn">→</div>
+        <div class="touch-btn down-btn" id="down-btn">↓</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Player Name Modal -->
+  <div id="name-modal" class="modal">
+    <div class="modal-content">
+      <h2>Game Over!</h2>
+      <p>Your score: <span id="final-score">0</span></p>
+      <div class="input-group">
+        <label for="player-name">Enter your name:</label>
+        <input type="text" id="player-name" maxlength="15" placeholder="Player">
+      </div>
+      <button id="save-score">Save Score</button>
+    </div>
+  </div>
+  
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
